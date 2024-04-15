@@ -2,7 +2,7 @@ package com.ps; //Package Declaration
 
 import java.util.Scanner;
 
-public class Main {
+public class Main { //this class can be accessed from other classes
     public static void main(String[] args) {
         Scanner inputScanner = new Scanner(System.in);
 
@@ -10,7 +10,7 @@ public class Main {
         System.out.print("Enter the loan amount you want to apply for: ");
         double principalAmount = inputScanner.nextDouble();
 
-        // Prompt the user for the annual interest rate (as a percentage)g
+        // Prompt the user for the annual interest rate (as a percentage)
         System.out.print("Enter the annual interest rate: ");
         double annualInterestRate = inputScanner.nextDouble();
         double monthlyInterestRate = (annualInterestRate / 100) / 12;
@@ -51,4 +51,3 @@ public class Main {
         return (principalAmount * monthlyInterestRate) / (1 - Math.pow(1 + monthlyInterestRate, -totalNumberOfPayments));
     }
 }
-
